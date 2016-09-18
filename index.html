@@ -1,17 +1,25 @@
 <html>
 <head>
 <title>B U S _ N I N J A</title>
-<link rel="stylesheet" href="style/main.css">
-<script src="js/jquery.2.2.4.min.js"></script>
-<script src="js/engine.js"></script>
+	<link rel="stylesheet" href="style/main.css">
+	<script src="js/jquery.2.2.4.min.js"></script>
+	<script src="js/vars.js"></script>
+	<script src="js/level.js"></script>
+	<script src="js/audio.js"></script>
+	<script src="js/main.js"></script>
 </head>
 <body>
 
 <div id="cabinet">
 	<div id="marquee">B U S &nbsp N I N J A</div>
-	<div id="gamewindow">
-		<div id="ninja">ninja</div>
-		<div id="bus">bus</div>
+	<div id="game_screen" class="screen_box">
+		<div id="level_screen" class="hidden screen_box">
+			<div id="ninja">ninja
+				<div id="ninja_eyes"></div>
+				<div id="ninja_sword" class="hidden">sword</div>
+			</div>
+			<div id="bus">bus</div>
+		</div>
 	</div>
 </div>
 
