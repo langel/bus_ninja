@@ -31,9 +31,18 @@ init = function() {
 	// define major elements
 	game_screen = $('#game_screen');
 	level_screen = $('#level_screen');
+	level_shower = $('#level_notice');
+	points_shower = $('#points_shower');
+	level_end_screen = $('#level_end_screen');
+	for (i=0; i<5; i++) {
+		trees.push($('.trees' + i));
+		trees_left_pos.push(1000);
+	}
 
 	title_init();
 	//level_init();
+	//game_init();
+	//game_end_level_screen();
 	
 
 };
@@ -58,9 +67,9 @@ title_init = function() {
 };
 
 title_frame_logic = function() {
-	if (controls.any_key == 1) {
+	if (controls.any_key == 1 && controls_last_frame.any_key != 1) {
 		game_screen.removeClass('title_screen');
-		level_init();
+		game_init();
 	}
 	else {
 		handle_frame(title_frame_logic);

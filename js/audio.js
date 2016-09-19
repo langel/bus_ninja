@@ -6,6 +6,7 @@ var audio_objects = {
 var current_music, current_sfx;
 
 var sfx_files = [
+	'death',
 	'ninja basu',
 	'jump',
 	'star',

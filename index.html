@@ -3,8 +3,10 @@
 <title>B U S _ N I N J A</title>
 	<link rel="stylesheet" href="style/main.css">
 	<script src="js/jquery.2.2.4.min.js"></script>
+	<script src="js/game.js"></script>
 	<script src="js/vars.js"></script>
 	<script src="js/level.js"></script>
+	<script src="js/enemies.js"></script>
 	<script src="js/audio.js"></script>
 	<script src="js/main.js"></script>
 </head>
@@ -14,11 +16,36 @@
 	<div id="marquee">B U S &nbsp N I N J A</div>
 	<div id="game_screen" class="screen_box">
 		<div id="level_screen" class="hidden screen_box">
+			<div id="stats_bar">
+				<div id="level_notice"></div>
+				<div id="points_notice">
+					<div id="points_shower"></div>
+					POINTS
+				</div>
+			</div>
 			<div id="ninja">ninja
 				<div id="ninja_eyes"></div>
 				<div id="ninja_sword" class="hidden">sword</div>
 			</div>
-			<div id="bus">bus</div>
+			<div id="bus">
+				bus
+				<div class="wheel wheel1"></div>
+				<div class="wheel wheel2"></div>
+			</div>
+			<div id="road"></div>
+			<div id="grass"></div>
+			<div class="trees trees0"></div>
+			<div class="trees trees1"></div>
+			<div class="trees trees2"></div>
+			<div class="trees trees3"></div>
+			<div class="trees trees4"></div>
+		</div>
+		<div id="level_end_screen" class="hidden">
+			SORRY NINJA
+			<br>
+			BAE WANTS TO DO
+			<br>
+			IT AGAIN TOMORROW
 		</div>
 	</div>
 </div>

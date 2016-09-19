@@ -1,9 +1,12 @@
-var marquee, game_screen, level_screen;
+var marquee, game_screen, level_screen, points_shower;
+var level_end_screen;
+var level_counter, difficulty, points;
 
 var engine = {
 	fps: 24,
 	pixel_movement: 2,
 	paused: 0,
+	max_difficulty: 40,
 }
 
 var controls = {
@@ -35,13 +38,18 @@ var ninja = {
 	left_init: 200,
 	top: 200,
 	left: 200,
+	height: 128,
+	width: 64,
 	speed: 6,
 	dead: 0,
 	on_bus: 1,
 	crouch: 0,
 	crouch_speed: 2,
 	facing: 'right',
-	sword: {},
+	sword: {
+		width: 100,
+		height: 200,
+	},
 	jumping: 0,
 	jump_height: 0,
 	jump_frame_counter: 0,
@@ -60,6 +68,7 @@ var bus = {
 	present_in_game: 0,
 	left_bounds: 60,
 	right_bounds: 608,
+	wheels: {},
 };
 
 var sword_throttle = 0;
@@ -69,3 +78,23 @@ var ninja_throwing_stars = [];
 var throwing_star_throttler = 0;
 var throwing_star_speed = 16;
 
+
+var enemies = [];
+
+var enemy_spawn_countdown;
+
+var enemy_bird = {
+	type: 'bird',
+	width: 32,
+	height: 32,
+	top: 0,
+	left: 0,
+	speed: 8,
+	direction: 0,
+	wing_frame: 0,
+	diving: 0,
+	points: 250,
+};
+
+var trees = [];
+var trees_left_pos = [];
