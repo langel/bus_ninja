@@ -1,6 +1,6 @@
 var marquee, game_screen, level_screen, points_shower;
 var level_end_screen;
-var level_counter, difficulty, points;
+var level_counter, difficulty, points, time_countdown;;
 
 var engine = {
 	fps: 24,

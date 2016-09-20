@@ -285,11 +285,13 @@ level_frame_logic = function() {
 	}
 
 	// update points shower
-	if (ninja.on_bus == 1) {
+	if (ninja.on_bus == 1 && engine.paused != 1) {
 		game_add_points(1);
 	}
 	points_shower.text(points);
-	
+	var timer_seconds = Math.ceil((difficulty * 20 - bus.motion_counter) / engine.fps);
+	time_countdown.text('TIME ' + timer_seconds);
+
 	bus.motion_counter++;
 
 	if (ninja.dead != 1 && bus.motion_counter >= difficulty * 20) {

@@ -33,6 +33,7 @@ init = function() {
 	level_screen = $('#level_screen');
 	level_shower = $('#level_notice');
 	points_shower = $('#points_shower');
+	time_countdown = $('#time_countdown');
 	level_end_screen = $('#level_end_screen');
 	for (i=0; i<5; i++) {
 		trees.push($('.trees' + i));
